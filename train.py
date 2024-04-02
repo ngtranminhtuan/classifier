@@ -11,32 +11,32 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import confusion_matrix, classification_report
 
-# Định nghĩa các phép biến đổi tiền xử lý
+# Preprocessing and Augmentation
 transform = transforms.Compose([
-    transforms.Resize((224, 224)),  # Resize hình ảnh về kích thước phù hợp với mô hình
-    transforms.ToTensor(),  # Chuyển hình ảnh về tensor
-    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),  # Chuẩn hóa với các giá trị mean và std của ImageNet
+    transforms.Resize((512, 512)),
+    transforms.ToTensor(),
+    transforms.Normalize(mean=[0.6689, 0.6875, 0.7218], std=[0.3951, 0.3775, 0.3541]),  # Normalize with current dataset
 ])
 
-# Load tập dữ liệu
+# Load datasets
 train_dataset = torchvision.datasets.ImageFolder(root='checkbox_state_v2/data/train', transform=transform)
 val_dataset = torchvision.datasets.ImageFolder(root='checkbox_state_v2/data/val', transform=transform)
 
 train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
 
-# Tải mô hình và tinh chỉnh
+# Load model and change output shape
 model = models.resnet50(weights=None)
 num_ftrs = model.fc.in_features
-model.fc = nn.Linear(num_ftrs, len(train_dataset.classes))  # Thay thế lớp cuối cùng
+model.fc = nn.Linear(num_ftrs, len(train_dataset.classes))  # Replace last output
 model_path = 'best_model.pt'
 model.load_state_dict(torch.load(model_path))
 
-# Chọn thiết bị
+# Choose device
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 model = model.to(device)
 
-# Định nghĩa hàm mất mát và bộ tối ưu
+# Loss and optimizer
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.85)
 
@@ -140,9 +140,9 @@ def evaluate_and_plot(model, dataloader, epoch):
     return epoch_loss, epoch_top1_acc, epoch_topk_acc
 
 # Cập nhật vòng lặp huấn luyện để bao gồm đánh giá
-best_val_loss = 0.36
-best_val_acc1 = 87.5
-patience = 20  # Number of epochs to wait for improvement before stopping
+best_val_loss = 0.3106
+best_val_acc1 = 91.35
+patience = 200  # Number of epochs to wait for improvement before stopping
 patience_counter = 0  # Counter for tracking the number of epochs without improvement
 
 def train_model(model, criterion, optimizer, train_loader, val_loader, num_epochs=25):

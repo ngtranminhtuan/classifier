@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
     git \
     libgl1-mesa-glx && \
     rm -rf /var/lib/apt/lists/* && \
+    pip install --upgrade pip setuptools wheel \
     pip install --no-cache-dir -r requirements.txt
 
 # Copy data

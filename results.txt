@@ -1,0 +1,44 @@
+Epoch: 1, Loss: 1.3400, Top-1 Acc: 47.12%, Top-3 Acc: 100.00%
+Epoch: 2, Loss: 0.7620, Top-1 Acc: 63.46%, Top-3 Acc: 100.00%
+Epoch: 3, Loss: 0.6775, Top-1 Acc: 72.12%, Top-3 Acc: 100.00%
+Epoch: 4, Loss: 0.5842, Top-1 Acc: 81.73%, Top-3 Acc: 100.00%
+Epoch: 5, Loss: 0.4206, Top-1 Acc: 85.58%, Top-3 Acc: 100.00%
+Epoch: 6, Loss: 0.4256, Top-1 Acc: 85.58%, Top-3 Acc: 100.00%
+Epoch: 7, Loss: 0.5616, Top-1 Acc: 81.73%, Top-3 Acc: 100.00%
+Epoch: 8, Loss: 0.3768, Top-1 Acc: 89.42%, Top-3 Acc: 100.00%
+Epoch: 9, Loss: 0.5417, Top-1 Acc: 82.69%, Top-3 Acc: 100.00%
+Epoch: 10, Loss: 0.3673, Top-1 Acc: 86.54%, Top-3 Acc: 100.00%
+Epoch: 11, Loss: 0.3894, Top-1 Acc: 87.50%, Top-3 Acc: 100.00%
+Epoch: 12, Loss: 0.4561, Top-1 Acc: 86.54%, Top-3 Acc: 100.00%
+Epoch: 13, Loss: 0.3967, Top-1 Acc: 89.42%, Top-3 Acc: 100.00%
+Epoch: 14, Loss: 0.4585, Top-1 Acc: 85.58%, Top-3 Acc: 100.00%
+Epoch: 15, Loss: 0.3602, Top-1 Acc: 88.46%, Top-3 Acc: 100.00%
+Epoch: 16, Loss: 0.3812, Top-1 Acc: 88.46%, Top-3 Acc: 100.00%
+Epoch: 17, Loss: 0.3820, Top-1 Acc: 87.50%, Top-3 Acc: 100.00%
+Epoch: 18, Loss: 0.4145, Top-1 Acc: 88.46%, Top-3 Acc: 100.00%
+Epoch: 19, Loss: 0.3537, Top-1 Acc: 88.46%, Top-3 Acc: 100.00%
+New best model found! Epoch: 19, Loss: 0.3537, Top-1 Acc: 88.46%
+Epoch: 20, Loss: 0.3489, Top-1 Acc: 88.46%, Top-3 Acc: 100.00%
+New best model found! Epoch: 20, Loss: 0.3489, Top-1 Acc: 88.46%
+Epoch: 21, Loss: 0.3736, Top-1 Acc: 90.38%, Top-3 Acc: 100.00%
+Epoch: 22, Loss: 0.3834, Top-1 Acc: 89.42%, Top-3 Acc: 100.00%
+Epoch: 23, Loss: 0.3613, Top-1 Acc: 88.46%, Top-3 Acc: 100.00%
+Epoch: 24, Loss: 0.4053, Top-1 Acc: 89.42%, Top-3 Acc: 100.00%
+Epoch: 25, Loss: 0.3562, Top-1 Acc: 88.46%, Top-3 Acc: 100.00%
+Epoch: 26, Loss: 0.3819, Top-1 Acc: 88.46%, Top-3 Acc: 100.00%
+Epoch: 27, Loss: 0.3591, Top-1 Acc: 88.46%, Top-3 Acc: 100.00%
+Epoch: 28, Loss: 0.3608, Top-1 Acc: 89.42%, Top-3 Acc: 100.00%
+Epoch: 29, Loss: 0.3750, Top-1 Acc: 89.42%, Top-3 Acc: 100.00%
+Epoch: 30, Loss: 0.3627, Top-1 Acc: 90.38%, Top-3 Acc: 100.00%
+Epoch: 31, Loss: 0.3746, Top-1 Acc: 90.38%, Top-3 Acc: 100.00%
+Epoch: 32, Loss: 0.4032, Top-1 Acc: 89.42%, Top-3 Acc: 100.00%
+Epoch: 33, Loss: 0.4021, Top-1 Acc: 89.42%, Top-3 Acc: 100.00%
+Epoch: 34, Loss: 0.3696, Top-1 Acc: 88.46%, Top-3 Acc: 100.00%
+Epoch: 35, Loss: 0.3718, Top-1 Acc: 88.46%, Top-3 Acc: 100.00%
+Epoch: 36, Loss: 0.3945, Top-1 Acc: 89.42%, Top-3 Acc: 100.00%
+Epoch: 37, Loss: 0.4074, Top-1 Acc: 91.35%, Top-3 Acc: 100.00%
+Epoch: 38, Loss: 0.4060, Top-1 Acc: 90.38%, Top-3 Acc: 100.00%
+Epoch: 39, Loss: 0.3994, Top-1 Acc: 90.38%, Top-3 Acc: 100.00%
+Epoch: 40, Loss: 0.3721, Top-1 Acc: 89.42%, Top-3 Acc: 100.00%
+Early stopping triggered. Stopping training at epoch 40.
+Training complete.
