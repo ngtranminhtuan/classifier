@@ -37,6 +37,15 @@ python train.py
 ```
 
 ## Training & Inference runtime analysis and optimization
+### Benchmark:
+Accuracy: 91.35%
+Average Inference Time: 0.011154 seconds per sample
+``` bash
+python benchmark.py
+python quantize_prune.py
+```
+
+After quantize and pruning, if accuracy is same as best_model, we can speed up model!
 
 ## Data Analysis, Preprocessing and Augmentations
 There is multi-class classification problem (not multi-label), so we can use CrossEntropyLoss for output class name and confident score of every class.
