@@ -30,10 +30,10 @@ model = models.resnet50(weights=None)
 num_ftrs = model.fc.in_features
 model.fc = nn.Linear(num_ftrs, len(train_dataset.classes))  # Replace last output
 model_path = 'best_model.pt'
-model.load_state_dict(torch.load(model_path))
 
 # Choose device
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+model.load_state_dict(torch.load(model_path, map_location=device))
 model = model.to(device)
 
 # Loss and optimizer
