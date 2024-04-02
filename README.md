@@ -12,8 +12,23 @@ If your VRAM is not enough, let's decrease batch size.
 model.to(device)
 image.to(device)
 ```
+## Install git lfs
+
+```bash
+sudo apt-get update && sudo apt-get install git-lfs
+git clone https://github.com/ngtranminhtuan/classifier
+cd classifier
+git lfs install
+git lfs pull
+```
 
 ## Train/Eval/Inference
+### Inference
+In container bash
+``` bash
+python inference.py --image_url=checkbox_state_v2/data/val/other/fde4d694c0fdff8e7f4c7e99b34678ec.png
+```
+
 ### Train/Eval
 ``` bash
 docker build -t image_name:tag .
@@ -21,11 +36,6 @@ docker run -it --name your-container-name -v $PWD:/usr/src/app your-image-name:t
 python train.py
 ```
 
-### Inference
-In container bash
-``` bash
-python inference.py --image_url=checkbox_state_v2/data/val/other/fde4d694c0fdff8e7f4c7e99b34678ec.png
-```
 ## Training & Inference runtime analysis and optimization
 
 ## Data Analysis, Preprocessing and Augmentations
