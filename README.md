@@ -38,7 +38,7 @@ python train.py
 
 ## Training & Inference runtime analysis and optimization
 ### Benchmark:
-Accuracy: 91.35%
+Accuracy: 91.35%\n
 Average Inference Time: 0.007960 seconds per sample
 ``` bash
 python benchmark.py
