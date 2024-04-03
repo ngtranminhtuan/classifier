@@ -119,3 +119,4 @@ using over-sampling (can be over-fitting)
 + Try to change the model size of ResNet(ResNet18, 50...), or other architecture likely Transformer: We
 train embedding space (unsupervised) and downstream task classification(supervised).
 + Abstract to class for scalable source code.
++ Add model.yaml for easy tuning hyperparams.
