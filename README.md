@@ -24,15 +24,16 @@ git lfs pull
 
 ## Train/Eval/Inference
 ### Inference
-In container bash
+
 ``` bash
+docker build -t image_name:tag .
+docker run -it --name your-container-name -v $PWD:/usr/src/app your-image-name:tag
 python inference.py --image_url=checkbox_state_v2/data/val/other/fde4d694c0fdff8e7f4c7e99b34678ec.png
 ```
 
 ### Train/Eval
+In container bash
 ``` bash
-docker build -t image_name:tag .
-docker run -it --name your-container-name -v $PWD:/usr/src/app your-image-name:tag
 python train.py
 ```
 
