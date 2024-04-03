@@ -1,4 +1,4 @@
-# Summarize:
+# Summarize
 Below is the performance chart:
 ![image alt text](<assets/confusion_matrix_epoch_80.png>)
 ![image alt text](<assets/metrics_plot.png>)
