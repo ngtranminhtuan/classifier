@@ -53,9 +53,9 @@ python quantize_prune.py
 After quantizing and pruning, if the accuracy is the same as best_model, we can speed up the model!
 
 ## Data Analysis, Preprocessing and Augmentations
-There is a multi-class classification problem (not multi-label), so we can use CrossEntropyLoss for output class name and confident score of every class.
+There is a multi-class classification problem (not multi-label), so we can use CrossEntropyLoss for the output class name and a confident score for every class(add torch.max in output).
 
-After explore the dataset, we see that some images can be confused:
+After exploring the dataset, we see that some images can be confused:
 + checked/0aabda81e5aa3cccbae391d6231238d8.png
 + checked/4c735d69860ff3c5b089ce64bd7ce846.png
 + checked/f081c3ca4cef8dc89c87e1b0b3464d89.png
@@ -84,8 +84,8 @@ I'm using the backbone ResNet50 for easy building pipelines. We can use YoloV8 f
 Because this problem is multi-class, so I'm using nn.CrossEntropyLoss. (If multi-label, need to use Binary Cross Entropy and Sigmoid).
 
 ## The training code itself, i.e., the optimizer, default hyperparameters, epochs, etc.
-+ We can load the best model and continue to training.
-+ Optimizer: In small datasets, I choose SGD, we can try Adam or switch based to convergence rate.
++ We can load the best model and continue to train.
++ Optimizer: In small datasets, I choose SGD, we can try Adam or switch based on convergence rate.
 + optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
 + patience = 200 (For early stopping avoid overfitting)
 + num_epochs=500
@@ -102,9 +102,11 @@ Because this problem is multi-class, so I'm using nn.CrossEntropyLoss. (If multi
 ## Suggestions on how can you improve this system in the future.
 + Can modify loss function for class weighting bias (because of unbalanced dataset), or 
 using over-sampling (can be over-fitting)
-+ Real-life Application: we need to use Triton/TensorRT for dynamic batching inference -> maximize GPU resources.
++ Apply MlFlow to metrics/model tracking and tracking experiments.
++ If in cloud service, you can refer my pipeline to CI/CD, and deploy for millions of users with FastAPI, Docker, and Kubernetes.
++ Real-life Application: we need to use Triton/TensorRT for dynamic BATCHING inference -> maximize GPU resources.
 + Add more data every class, increasing the quality of the dataset.
-+ To improve speed, we can deep-pruning the cluster of the graph by Torch Pruning and Quantize to Int8.
-+ Try to change the model size of ResNet, or other architecture likely Transformer: We
++ To improve speed, we can deep-pruning the graph cluster by Torch Pruning and Quantize to Int8, ann fine-tuning to keep accuracy.
++ Try to change the model size of ResNet(ResNet18, 50...), or other architecture likely Transformer: We
 train embedding space (unsupervised) and downstream task classification(supervised).
 + Abstract to class for scalable source code.
