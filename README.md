@@ -55,7 +55,7 @@ After quantizing and pruning, if the accuracy is the same as best_model, we can 
 ## Data Analysis, Preprocessing and Augmentations
 There is a multi-class classification problem (not multi-label), so we can use CrossEntropyLoss for the output class name and a confident score for every class(add torch.max in output).
 
-After exploring the dataset, we see that some images can be confused:
+### After exploring the dataset, we see that some images can be confused:
 + checked/0aabda81e5aa3cccbae391d6231238d8.png
 + checked/4c735d69860ff3c5b089ce64bd7ce846.png
 + checked/f081c3ca4cef8dc89c87e1b0b3464d89.png
@@ -64,8 +64,8 @@ After exploring the dataset, we see that some images can be confused:
 + unchecked/98c19fd0227f5b20810eb28cfab18dba.png
 + unchecked/be39967bbaf41b4e6617da73e5ebccad.png
 
-If I remove this image, Accuracy will be higher, but in this phase, I'll hold to training. We can add more data, or use another backbone model
-to learn these features.
+### If I remove this image, Accuracy will be higher, but in this phase, I'll hold to training. We can add more data, or use another backbone model
+### to learn these features.
 
 Preprocessing and Augmentation: I split datasets into train/val folders for train and evaluation.
 ``` bash
