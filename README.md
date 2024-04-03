@@ -3,9 +3,9 @@ Below is the performance chart:
 ![image alt text](<assets/confusion_matrix_epoch_80.png>)
 ![image alt text](<assets/metrics_plot.png>)
 
-I don't have GPU. We can speed up training and inference by parallel computing with accelerator(CUDA, TPU, DSP...) by using torch to device, and increase batch size(16, 32, 64, 128, 256... based on your VRAM). 
+I don't have GPU. We can speed up training and inference by parallel computing with accelerator(CUDA, TPU, DSP...) by using torch to device, and increase batch-size(16, 32, 64, 128, 256... based on your VRAM). 
 
-If your VRAM is not enough, let's decrease batch size.
+If your VRAM is not enough, let's decrease batch-size, image-size.
 
 
 ```bash
