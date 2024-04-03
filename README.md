@@ -104,6 +104,9 @@ Because this problem is multi-class, so I'm using nn.CrossEntropyLoss. (If multi
 using over-sampling (can be over-fitting)
 + Apply MlFlow to metrics/model tracking and tracking experiments.
 + If in cloud service, you can refer my pipeline to CI/CD, and deploy for millions of users with FastAPI, Docker, and Kubernetes.
+  ``` bash
+  https://github.com/ngtranminhtuan/LLMOPS
+  ```
 + Real-life Application: we need to use Triton/TensorRT for dynamic BATCHING inference -> maximize GPU resources.
 + Add more data every class, increasing the quality of the dataset.
 + To improve speed, we can deep-pruning the graph cluster by Torch Pruning and Quantize to Int8, ann fine-tuning to keep accuracy.
