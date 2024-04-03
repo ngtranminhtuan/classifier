@@ -139,7 +139,7 @@ def evaluate_and_plot(model, dataloader, epoch):
 
     return epoch_loss, epoch_top1_acc, epoch_topk_acc
 
-# Cập nhật vòng lặp huấn luyện để bao gồm đánh giá
+# Update training loop and evaluation
 best_val_loss = 0.3106
 best_val_acc1 = 91.35
 patience = 200  # Number of epochs to wait for improvement before stopping
@@ -160,7 +160,7 @@ def train_model(model, criterion, optimizer, train_loader, val_loader, num_epoch
             loss.backward()
             optimizer.step()
 
-        # Đánh giá sau mỗi epoch
+        # Eval every epoch
         val_loss, val_acc1, _ = evaluate_and_plot(model, val_loader, epoch + 1)
         
         # Check for improvement
@@ -180,6 +180,6 @@ def train_model(model, criterion, optimizer, train_loader, val_loader, num_epoch
     print("Training complete.")
     return model
 
-# Huấn luyện và đánh giá mô hình
+# Train and Eval Model
 trained_model = train_model(model, criterion, optimizer, train_loader, val_loader, num_epochs=500)
 
