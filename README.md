@@ -21,6 +21,12 @@ cd classifier
 git lfs install
 git lfs pull
 ```
+Check sum for best_model.pt
+``` bash
+md5sum best_model.pt
+# Expectation:
+# 580ea4a5c3830e1e1b16966c1451be80  best_model.pt 
+```
 
 ## Train/Eval/Inference
 ### Inference
