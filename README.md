@@ -70,7 +70,7 @@ There is a multi-class classification problem (not multi-label), so we can use C
 + unchecked/98c19fd0227f5b20810eb28cfab18dba.png
 + unchecked/be39967bbaf41b4e6617da73e5ebccad.png
 
-### IF I REMOVE THESE IMAGES, Accuracy will be higher, but in this phase, I'll hold to training. We can add more data, or use another backbone model to learn these features.
+### IF I REMOVE THESE IMAGES, Accuracy will be higher, but in this phase, I'll hold to training because I don't clear why the above images belong.
 
 Preprocessing and Augmentation: I split datasets into train/val folders for train and evaluation.
 ``` bash
