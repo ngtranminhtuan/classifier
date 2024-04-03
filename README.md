@@ -79,6 +79,7 @@ We can tune in at this point!
 
 ## Model design
 ![image alt text](<assets/ResNet50.png>)
+<br />
 I'm using the backbone ResNet50 for easy building pipelines. We can use YoloV8 for the best extractor.
 Because this problem is multi-class, so I'm using nn.CrossEntropyLoss. (If multi-label, need to use Binary Cross Entropy and Sigmoid).
 
