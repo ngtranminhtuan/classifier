@@ -43,6 +43,10 @@ Accuracy: 91.35% <br />
 Average Inference Time: 0.007960 seconds per sample
 ``` bash
 python benchmark.py
+```
+
+### Optimization:
+``` bash
 python quantize_prune.py
 ```
 
