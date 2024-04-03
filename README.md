@@ -56,7 +56,7 @@ python benchmark.py
 python quantize_prune.py
 ```
 
-After quantizing and pruning, if the accuracy is the same as best_model, we can speed up the model!
+After quantizing and pruning, we optimize 2 objectives: model footprint and accuracy, we can speed up the model with high accuracy!
 
 ## Data Analysis, Preprocessing and Augmentations
 There is a multi-class classification problem (not multi-label), so we can use CrossEntropyLoss for the output class name and a confident score for every class(add torch.max in output).
